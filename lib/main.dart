@@ -108,7 +108,7 @@ class ContainerScreen extends StatelessWidget {
             ),
             const Spacer(),
             Image.network(
-              'https://via.placeholder.com/150',
+              'https://www.motociclismo.es/uploads/s1/64/24/06/6/5e3c00f30de69474113493eb-ducati-v4-superleggera-2020-imagenes-oficiales-de-la-maquina-de-record-italiana.jpeg',
               width: 150,
               height: 300,
               fit: BoxFit.contain,
@@ -153,18 +153,16 @@ class RowScreen extends StatelessWidget {
               width: 50,
               height: 100,
             ),
-            const SizedBox(height: 16), // Añadido un SizedBox para separación
+            const SizedBox(height: 16),
             SizedBox(
               width: 150,
               height: 50,
               child: ElevatedButton(
-                onPressed: () {
-                  // Acción al presionar el botón en el SizedBox
-                },
+                onPressed: () {},
                 child: Text('Botón en SizedBox'),
               ),
             ),
-            const SizedBox(height: 16), // Añadido un SizedBox para separación
+            const SizedBox(height: 16),
             Expanded(
               child: ListView(
                 children: [
@@ -246,9 +244,8 @@ class IconScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return WillPopScope(
       onWillPop: () async {
-        // Acción al presionar el botón de retroceso
         Navigator.pop(context);
-        return false; // Evita que la página se cierre automáticamente
+        return false;
       },
       child: Scaffold(
         appBar: AppBar(
@@ -273,6 +270,12 @@ class IconScreen extends StatelessWidget {
                 size: 104,
                 color: Colors.red,
               ),
+              const SizedBox(height: 16), // Espacio entre los íconos
+              Icon(
+                Icons.star,
+                size: 104,
+                color: Colors.amber,
+              ),
             ],
           ),
         ),
@@ -295,18 +298,15 @@ class IconScreen extends StatelessWidget {
               ListTile(
                 title: Text('Opción 1'),
                 onTap: () {
-                  // Acción al seleccionar la opción 1 en el Drawer
                   Navigator.pop(context);
                 },
               ),
               ListTile(
                 title: Text('Opción 2'),
                 onTap: () {
-                  // Acción al seleccionar la opción 2 en el Drawer
                   Navigator.pop(context);
                 },
               ),
-              // Añade más opciones según sea necesario
             ],
           ),
         ),
