@@ -253,15 +253,27 @@ class IconScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blueAccent,
-          title: const Text('Icon',
-              style:
-                  TextStyle(fontWeight: FontWeight.bold, color: Colors.white)),
+          title: const Text(
+            'Icon',
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          ),
         ),
-        body: const Center(
-          child: Icon(
-            Icons.flight,
-            size: 104,
-            color: Colors.deepPurple,
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(
+                Icons.flight,
+                size: 104,
+                color: Colors.deepPurple,
+              ),
+              const SizedBox(height: 16), // Espacio entre los íconos
+              Icon(
+                Icons.favorite,
+                size: 104,
+                color: Colors.red,
+              ),
+            ],
           ),
         ),
         drawer: Drawer(
